@@ -1,5 +1,7 @@
 package com.ryan.WWTBAM.question.models.views;
 
+import com.ryan.WWTBAM.db.entity.Answer;
+import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -11,5 +13,5 @@ import lombok.Setter;
 public class QuestionViewModel {
     private int id;
     private String question;
-    private boolean isCorrect;
+    private List<Answer> answer;
 }

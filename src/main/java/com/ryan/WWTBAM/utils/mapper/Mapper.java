@@ -33,7 +33,6 @@ public class Mapper extends ModelMapper {
                 .collect(Collectors.toList());
     }
 
-
     public <D, T> Set<D> map(final Set<T> entityList, Class<D> outCLass) {
 
         Objects.requireNonNull(entityList);

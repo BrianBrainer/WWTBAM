@@ -19,7 +19,9 @@ public class QuestionService {
     public QuestionDto getQuestionByDifficultyLevel(int difficultyLevel){
         List<Question> potentialQuestions = questionRepository.findAllByDifficultyLevel(difficultyLevel);
 
-        return mapper.map(potentialQuestions.get(new Random().nextInt(potentialQuestions.size())), QuestionDto.class);
+        var question = potentialQuestions.get(new Random().nextInt(potentialQuestions.size()));
+
+        return mapper.map(question, QuestionDto.class);
     }
 
 

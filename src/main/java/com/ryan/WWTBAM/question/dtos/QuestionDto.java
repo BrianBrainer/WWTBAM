@@ -1,5 +1,7 @@
 package com.ryan.WWTBAM.question.dtos;
 
+import com.ryan.WWTBAM.db.entity.Answer;
+import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,8 +11,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class QuestionDto {
-    private int id;
+    private Long id;
     private String question;
-    private boolean isCorrect;
-
+    private List<Answer> answer;
 }
